@@ -1,11 +1,11 @@
 # AbstractSwipeLayout
 抽象的下拉刷新/上拉加载控件
-## 背景
+### 背景
 几乎每个APP都会有这个功能，并且设计也是五花八门，似乎在比谁更好看，基于设计的各种需求网上找的现成项目难免不合适，所以我把它做动画的部分给抽象出来，希望能满足大部分的设计需求。
-## 预览
+### 预览
 <img src="https://github.com/Dahuoji-Coder/AbstractSwipeLayout/blob/main/Screen_Video.gif?raw=true" width="300" />
 
-## HeaderView实现
+### HeaderView实现
 下拉刷新需要自定义一个HeaderView，然后实现IHeaderView接口就可以实现各种效果了
 ```java
 public class MyHeaderView extends LinearLayout implements IHeaderView {
@@ -61,9 +61,9 @@ public class MyHeaderView extends LinearLayout implements IHeaderView {
 
 }
 ```
-## FooterView实现
+### FooterView实现
 和HeaderView一模一样
-## ContentView实现
+### ContentView实现
 ContentView需要实现的是IContentView，需要返回一下使用的滑动控件是否已经滑动到顶部或者底部（demo中以ScrollView为例）
 ```java
 public class MyContentView extends LinearLayout implements IContentView {
@@ -100,7 +100,7 @@ public class MyContentView extends LinearLayout implements IContentView {
 
 }
 ```
-## 准备工作就完成了,使用就更简单了
+### 准备工作就完成了,使用就更简单了
 ```java
 public class MainActivity extends AppCompatActivity {
 
