@@ -2,6 +2,9 @@
 抽象的下拉刷新/上拉加载控件
 ## 背景
 几乎每个APP都会有这个功能，并且设计也是五花八门，似乎在比谁更好看，基于设计的各种需求网上找的现成项目难免不合适，所以我把它做动画的部分给抽象出来，希望能满足大部分的设计需求。
+## 预览
+<img src="https://github.com/Dahuoji-Coder/AbstractSwipeLayout/blob/main/Screen_Video.gif?raw=true" width="300" />
+
 ## HeaderView实现
 下拉刷新需要自定义一个HeaderView，然后实现IHeaderView接口就可以实现各种效果了
 ```java
