@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 
 public class MyFooterView extends LinearLayout implements IFooterView {
 
+    //测试 merge request
     private TextView textView;
     private boolean islLoading = false;
 
