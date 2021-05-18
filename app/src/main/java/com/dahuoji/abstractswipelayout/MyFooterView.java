@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 public class MyFooterView extends LinearLayout implements IFooterView {
 
     private TextView textView;
+    private boolean islLoading = false;
 
     public MyFooterView(Context context) {
         super(context);
@@ -33,8 +34,10 @@ public class MyFooterView extends LinearLayout implements IFooterView {
 
     @Override
     public void move(float dY) {
+        if (islLoading) return;
+
         if (Math.abs(dY) >= 140) {
-            textView.setText("松手");
+            textView.setText("松手开始加载");
         } else {
             textView.setText("上拉加载更多 " + dY);
         }
@@ -42,11 +45,13 @@ public class MyFooterView extends LinearLayout implements IFooterView {
 
     @Override
     public void loading() {
-        textView.setText("加载中");
+        islLoading = true;
+        textView.setText("加载中...");
     }
 
     @Override
     public void complete() {
+        islLoading = false;
         textView.setText("完成");
     }
 }

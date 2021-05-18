@@ -38,7 +38,7 @@ public class MyHeaderView extends LinearLayout implements IHeaderView {
         if (islLoading) return;
 
         if (Math.abs(dY) >= height) {
-            textView.setText("松手");
+            textView.setText("松手开始刷新");
         } else {
             textView.setText("下拉刷新 " + dY);
         }
@@ -47,7 +47,7 @@ public class MyHeaderView extends LinearLayout implements IHeaderView {
     @Override
     public void loading() {
         islLoading = true;
-        textView.setText("加载中");
+        textView.setText("刷新中...");
     }
 
     @Override
